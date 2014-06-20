@@ -92,7 +92,8 @@
       (declare (ignore access package))
       (let ((class (find-class symbol nil))) 
         (and class 
-             (typep class 'standard-class)
+             (or (typep class 'standard-class)
+                 (typep class 'structure-class))
              (not (conditionp class))))))
    #'class-sorter))
 

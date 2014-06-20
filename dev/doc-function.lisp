@@ -122,6 +122,7 @@
                             (or (mopu:eql-specializer-p s)
                                 (typecase s
                                   (standard-class (class-name s))
+                                  (structure-class (class-name s))
                                   (built-in-class (class-name s))
                                   (t (type-of s)))))
                            (part (find-part (name-holder part) 'class name)))

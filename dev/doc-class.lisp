@@ -3,9 +3,9 @@
 (defclass doclisp-class (doclisp-assembly)
   ()
   (:default-initargs
-    :header "Class"
-    :part-kind "class"
-    :part-type 'class))
+    :header "Structure"
+    :part-kind "structure"
+    :part-type 'structure))
 
 (defmethod initialize-instance :after ((object doclisp-class) &key)
   (setf (slot-value object 'instance) (find-class (name object))))
